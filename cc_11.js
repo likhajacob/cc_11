@@ -31,3 +31,38 @@ book1.updateCopies(-1)
 
 //Logging the updated details after the check out.
 console.log(book1.getDetails())
+//Task 2 - Creating a Borrower Class
+
+//Creating a class named Borrower using the constructor method.
+class Borrower {
+    constructor (name, borrowerID,) {
+        this.name = name //Sources name in the instance.
+        this.borrowerID = borrowerID //Sources the borrower ID in the instance.
+        this.borrowedBooks = [] //Sets up an empty array for the borrowed books.
+    }
+
+    //Creating a method that adds a book title to the borrowed book array using push.
+    borrowBook(book) {
+        this.borrowedBooks.push(book)
+    }
+
+    //Creating a method that removes a book title from the borrowed book array using filter.
+    returnBook(book) {
+        this.borrowedBooks = this.borrowedBooks.filter(bk => bk !== book)
+    }
+}
+
+//Creating a new borrower using the contructor.
+const borrower1 = new Borrower("Alice Johnson", 201)
+
+//Adding the Great Gatsby to the borrowed book array.
+borrower1.borrowBook("The Great Gatsby")
+
+//Logging the updated array.
+console.log(borrower1.borrowedBooks)
+
+//Removing the Great Gatsby from the borrowed book array.
+borrower1.returnBook("The Great Gatsby")
+
+//Loggine the updated array.
+console.log(borrower1.borrowedBooks)
