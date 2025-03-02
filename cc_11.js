@@ -113,3 +113,8 @@ library.addBorrower(borrower1); // Adding borrower to the library
 library.lendbook(201, 123456);
 console.log(book1.getDetails()); // Expected output: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 123456, Copies: 3"
 console.log(borrower1.borrowedBooks); // Expected output: ["The Great Gatsby"]
+// Task 5: Implementing Book Returns
+console.log("********** Implemented Book Returns **********");
+library.returnBook(201, 123456);
+console.log(book1.getDetails()); // Expected output: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 123456, Copies: 4"
+console.log(borrower1.borrowedBooks); // Expected output: []
