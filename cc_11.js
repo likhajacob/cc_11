@@ -1,6 +1,4 @@
 //Task 1 - Creating a Book Class
-
-//Creating a class called book that uses the constructor method.
 class Book {
     constructor (title, author, isbn, copies) {
         this.title = title //Sources title in the instance.
@@ -67,7 +65,7 @@ borrower1.returnBook("The Great Gatsby")
 //Loggine the updated array.
 console.log(borrower1.borrowedBooks)
 // Task 3: Creating a Library Class
-console.log("********** Created Library Class **********");
+console.log("Created Library Class");
 class Library {
     constructor() {
         this.books = [];
@@ -108,13 +106,13 @@ library.addBook(book1);
 library.listBooks(); // Expected Output: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 123456, Copies: 4"
 
 // Task 4: Implementing Book Borrowing
-console.log("********** Implemented Book Borrowing **********");
+console.log("Implemented Book Borrowing");
 library.addBorrower(borrower1); // Adding borrower to the library
 library.lendbook(201, 123456);
 console.log(book1.getDetails()); // Expected output: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 123456, Copies: 3"
 console.log(borrower1.borrowedBooks); // Expected output: ["The Great Gatsby"]
 // Task 5: Implementing Book Returns
-console.log("********** Implemented Book Returns **********");
+console.log("Implemented Book Returns");
 library.returnBook(201, 123456);
 console.log(book1.getDetails()); // Expected output: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 123456, Copies: 4"
 console.log(borrower1.borrowedBooks); // Expected output: []
